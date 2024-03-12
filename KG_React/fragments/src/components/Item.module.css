@@ -1,0 +1,16 @@
+.our_item {
+  border: 1px solid rgba(205, 203, 203, 0.542);
+  border-radius: 4px;
+  /* background-color: rgb(153, 252, 219); */
+  color: black;
+  margin: 6px;
+  /* text-align: center; */
+  /* padding-left: 16px; */
+  padding: 6px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.Button {
+  float: right;
+}

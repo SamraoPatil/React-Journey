@@ -1,0 +1,56 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "../components/Header";
+import SideBar from "../components/SideBar";
+import CreatePost from "../components/CreatePost";
+import PostList from "../components/PostList";
+import Footer from "../components/Footer";
+import { useState } from "react";
+import PostListProvider from "../store/post-list-store";
+import { Outlet } from "react-router-dom";
+import "./App.css";
+
+function App() {
+  const [selectedTab, setSelectedTab] = useState("Home");
+  return (
+    <>
+      <PostListProvider>
+        <div className="AppContainer">
+          <div className="header">
+            <Header></Header>
+          </div>
+          <div className="content">
+            <SideBar
+              className="sidebar"
+              selectedTab={selectedTab}
+              setSelectedTab={setSelectedTab}
+            ></SideBar>
+            <div className="post">
+              {/* {selectedTab === "Home" ? (
+                <PostList className="postlist"></PostList>
+              ) : (
+                <CreatePost></CreatePost>
+              )} */}
+              <Outlet></Outlet>
+            </div>
+          </div>
+          <div className="footer">
+            <Footer></Footer>
+          </div>
+        </div>
+      </PostListProvider>
+    </>
+  );
+}
+
+export default App;
+
+// fetch("https://dummyjson.com/posts/add", {
+//   method: "POST",
+//   headers: { "Content-Type": "application/json" },
+//   body: JSON.stringify({
+//     title: "I am in Love with someone.",
+//     userId: 5,
+//   }),
+// })
+//   .then((res) => res.json())
+//   .then(console.log);

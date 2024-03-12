@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* overflow: hidden; */
+}
+
+.AppContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  margin-bottom: 6px;
+}
+.content {
+  width: 100%;
+  display: flex;
+}
+.sidebar {
+  margin-left: 2px;
+  min-height: 490px;
+  border-radius: 7px;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-card {
+  margin: 15px 20px;
+  width: 380px;
+  height: 350px;
+  padding: 4px;
+}
+.likes {
+  margin: 0px 5px;
+}
+.comments {
+  margin: 0px 5px;
+}
+.share {
+  margin: 0px 5px;
+}
+.card-tags {
+  margin: 15px 4px;
+}
+#heart {
+  margin-right: 6px;
+}
+#faregcomment {
+  margin-right: 6px;
+}
+#faregshare {
+  margin-right: 6px;
+}
+
+.reactions {
+  margin: 15px 0 0 0;
+}
+
+.createPost {
+  width: 80%;
+  margin-top: 4%;
+  margin-left: 10%;
+}
+
+.welcome {
+  border: 2px solid rgba(255, 0, 0, 0.259);
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.welcome h1 {
+  text-align: center;
+}
+.welcome h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.welcome p {
+  text-align: center;
+  font-size: 40px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.loading h1 {
+  font-size: 90px;
+  color: gray;
+}
+
+.spinner {
+  margin-left: 600px;
+  margin-top: 100px;
+  width: 8rem;
+  height: 8rem;
+  font-weight: 800;
+}
